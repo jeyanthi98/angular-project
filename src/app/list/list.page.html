@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="for-group">
+        <h4>State and City</h4>
+        <div class="form-row">
+            <div class="col-md-5">
+                <label>State</label>
+                <select class="form-control" (change)="getSelectedCityList($event)">
+                    <option value="">Select State</option>
+                    <option value={{state.stateId}} *ngFor="let state of stateList">{{state.stateName}}</option>
+
+                </select>
+            </div>
+            <div class="col-md-5">
+                <label>City</label>
+                <city-list-cmp (cityName)="getSlectedCity($event)"></city-list-cmp>
+            </div>
+
+        </div><br>
+        <button class="btn btn-primary" (click)="submitState()">Submit</button>
+
+    </div>
+</div>

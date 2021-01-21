@@ -1,0 +1,9 @@
+<div class="container">
+    <div class="">
+        <select class="form-control" (change)="getSelectedCity($event)">
+            <option value="" >Select City</option>
+            <option value={{state.cityId}} *ngFor="let state of cityList">{{state.cityName}}</option>
+
+        </select>
+    </div>
+</div>
